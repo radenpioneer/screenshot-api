@@ -1,0 +1,19 @@
+services:
+  app:
+    container_name: app
+    depends_on:
+      - browserless
+    build: .
+    ports:
+      - 3000:3000
+    environment:
+      - BROWSER_ENDPOINT=browserless:3000
+      - TOKEN=S3CR3TL0V3RS
+
+  browserless:
+    container_name: browserless
+    image: ghcr.io/browserless/chromium:latest
+    ports:
+      - 3001:3000
+    environment:
+      - TOKEN=S3CR3TL0V3RS
