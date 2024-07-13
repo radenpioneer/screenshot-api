@@ -13,7 +13,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: dokku/github-action@1
+      - uses: dokku/github-action@master
         with:
           git_remote_url: 'ssh://dokku@ss.sngr.xyz:22/app'
           ssh_private_key: ${{ secrets.DOKKU_SSH_KEY }}
