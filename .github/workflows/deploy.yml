@@ -1,0 +1,20 @@
+name: 'Deploy to Server'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: dokku/github-action@1
+        with:
+          git_remote_url: 'ssh://dokku@ss.sngr.xyz:22/app'
+          ssh_private_key: ${{ secrets.DOKKU_SSH_KEY }}
+          branch: main
