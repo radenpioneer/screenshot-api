@@ -1,17 +1,19 @@
 {
-  "name": "screenshot-function",
-  "version": "2.0.0",
-  "license": "MIT",
-  "main": "index.js",
+  "name": "screenshot",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "check": "prettier --check .",
-    "format": "prettier --write .",
-    "preinstall": "npx only-allow pnpm"
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest",
+    "cf-typegen": "wrangler types"
   },
-  "dependencies": {
-    "@netlify/functions": "2.4.0",
-    "prettier": "2.8.8",
-    "puppeteer-core": "10.4.0",
-    "typescript": "5.3.2"
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.4.5",
+    "@cloudflare/workers-types": "^4.20240712.0",
+    "typescript": "^5.5.2",
+    "vitest": "1.5.0",
+    "wrangler": "^3.60.3"
   }
 }

@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "target": "ES5",
-    "lib": ["ESNext"],
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "noImplicitAny": false
-  }
-}
