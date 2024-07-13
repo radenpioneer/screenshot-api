@@ -29,6 +29,7 @@ COPY . .
 # copy production dependencies and source code into final image
 FROM base AS release
 COPY --from=deps --chown=bun:bun /tmp/bun/node_modules node_modules
+COPY --from=prerelease --chown=bun:bun /usr/src/app/browser.ts .
 COPY --from=prerelease --chown=bun:bun /usr/src/app/server.ts .
 COPY --from=prerelease --chown=bun:bun /usr/src/app/package.json .
 
