@@ -1,4 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>sngrstudio/renovate-config", ":automergeDisabled"]
+  "extends": ["local>sngrstudio/renovate-config", ":disableRenovate"]
 }
