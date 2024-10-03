@@ -12,7 +12,7 @@ services:
 
   browserless:
     container_name: browserless
-    image: ghcr.io/browserless/chromium:latest
+    image: ghcr.io/browserless/chromium:latest@sha256:15042b7dfe5d60568d3ca5076cf90892125fdec6a54fd6034eb1cb3f717ca790
     ports:
       - 3001:3000
     environment:
